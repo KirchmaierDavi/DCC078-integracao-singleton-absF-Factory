@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="790" viewBox="0 0 1100 790">
+  <style>
+    .box { fill: #f8fafc; stroke: #1e293b; stroke-width: 2; }
+    .title { fill: #dbeafe; stroke: #1e293b; stroke-width: 2; }
+    .text { font-family: Arial, sans-serif; font-size: 15px; fill: #0f172a; }
+    .small { font-family: Arial, sans-serif; font-size: 13px; fill: #334155; }
+    .line { stroke: #475569; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="triangle" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L10,6 L0,12 Z" fill="#f8fafc" stroke="#475569"/>
+    </marker>
+  </defs>
+
+  <rect class="box" x="410" y="25" width="280" height="105" rx="6"/>
+  <rect class="title" x="410" y="25" width="280" height="35" rx="6"/>
+  <text class="text" x="550" y="48" text-anchor="middle" font-weight="bold">Sindicato</text>
+  <text class="small" x="425" y="82">- INSTANCE: Sindicato</text>
+  <text class="small" x="425" y="105">+ getInstance(): Sindicato</text>
+
+  <rect class="box" x="375" y="190" width="350" height="125" rx="6"/>
+  <rect class="title" x="375" y="190" width="350" height="35" rx="6"/>
+  <text class="text" x="550" y="213" text-anchor="middle" font-weight="bold">«abstract» SindicatoFactory</text>
+  <text class="small" x="390" y="250">+ criarCarteira(): CarteiraSindical</text>
+  <text class="small" x="390" y="272">+ criarContribuicao(): ContribuicaoSindical</text>
+  <text class="small" x="390" y="294">+ criarAtendimento(): AtendimentoSindical</text>
+
+  <rect class="box" x="80" y="390" width="270" height="110" rx="6"/>
+  <rect class="title" x="80" y="390" width="270" height="35" rx="6"/>
+  <text class="text" x="215" y="413" text-anchor="middle" font-weight="bold">SindicatoUrbanoFactory</text>
+  <text class="small" x="95" y="450">criarCarteira()</text>
+  <text class="small" x="95" y="472">criarContribuicao()</text>
+  <text class="small" x="95" y="490">criarAtendimentoConcreto()</text>
+
+  <rect class="box" x="750" y="390" width="270" height="110" rx="6"/>
+  <rect class="title" x="750" y="390" width="270" height="35" rx="6"/>
+  <text class="text" x="885" y="413" text-anchor="middle" font-weight="bold">SindicatoRuralFactory</text>
+  <text class="small" x="765" y="450">criarCarteira()</text>
+  <text class="small" x="765" y="472">criarContribuicao()</text>
+  <text class="small" x="765" y="490">criarAtendimentoConcreto()</text>
+
+  <rect class="box" x="35" y="570" width="300" height="75" rx="6"/>
+  <text class="text" x="185" y="596" text-anchor="middle" font-weight="bold">«interface» CarteiraSindical</text>
+  <text class="small" x="185" y="620" text-anchor="middle">emitirPara(Associado): String</text>
+  <rect class="box" x="400" y="570" width="300" height="75" rx="6"/>
+  <text class="text" x="550" y="596" text-anchor="middle" font-weight="bold">«interface» ContribuicaoSindical</text>
+  <text class="small" x="550" y="620" text-anchor="middle">gerarPara(Associado): String</text>
+  <rect class="box" x="765" y="570" width="300" height="75" rx="6"/>
+  <text class="text" x="915" y="596" text-anchor="middle" font-weight="bold">«interface» AtendimentoSindical</text>
+  <text class="small" x="915" y="620" text-anchor="middle">atender(Associado): String</text>
+
+  <rect class="box" x="420" y="690" width="260" height="65" rx="6"/>
+  <text class="text" x="550" y="716" text-anchor="middle" font-weight="bold">«record» Associado</text>
+  <text class="small" x="550" y="739" text-anchor="middle">nome, cpf</text>
+
+  <path class="line" d="M550 130 L550 190" marker-end="url(#arrow)"/>
+  <path class="line" d="M500 315 L215 390" marker-end="url(#triangle)"/>
+  <path class="line" d="M600 315 L885 390" marker-end="url(#triangle)"/>
+  <path class="line" d="M145 500 L185 570" marker-end="url(#arrow)"/>
+  <path class="line" d="M215 500 L550 570" marker-end="url(#arrow)"/>
+  <path class="line" d="M285 500 L915 570" marker-end="url(#arrow)"/>
+  <path class="line" d="M815 500 L185 570" marker-end="url(#arrow)"/>
+  <path class="line" d="M885 500 L550 570" marker-end="url(#arrow)"/>
+  <path class="line" d="M955 500 L915 570" marker-end="url(#arrow)"/>
+  <path class="line" d="M185 645 L480 690" marker-end="url(#arrow)"/>
+  <path class="line" d="M550 645 L550 690" marker-end="url(#arrow)"/>
+  <path class="line" d="M915 645 L620 690" marker-end="url(#arrow)"/>
+</svg>
